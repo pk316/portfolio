@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/ekko-lightbox.css">
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/custom.css">
     <!-- Favicon-->
     <link rel="shortcut icon" href="favicon.png">
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
@@ -26,6 +27,53 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
   <body data-spy="scroll" data-target="#navigation" data-offset="120">
+    <header class="header">
+      <div class="sticky-wrapper">
+        <div role="navigation" class="navbar navbar-default">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-btn btn-sm navbar-toggle">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a href="#intro" class="navbar-brand scroll-to">
+                <!-- <img src="img/logo.png" alt="logo" class="home-logo"> -->
+                      <span class="letter" data-letter="P">P</span>
+                      <span class="letter" data-letter="R">R</span>
+                      <span class="letter" data-letter="O">O</span>
+                      <span class="letter" data-letter="S">S</span>
+                      <span class="letter" data-letter="I">I</span>
+                      <span class="letter" data-letter="T">T</span>
+                      <span class="letter" data-letter="H">H</span>
+              </a>
+            </div>
+            <div id="navigation" class="collapse navbar-collapse navbar-right">
+              <ul class="nav navbar-nav">
+                <li class="active">
+                  <a href="#intro">Home</a>
+                </li>
+                <li>
+                  <a href="#about">About </a>
+                </li>
+                <li>
+                  <a href="#services">Services</a>
+                </li>
+                <li>
+                  <a href="#portfolio">Portfolio</a>
+                </li>
+                <li>
+                  <a href="#text">Text</a>
+                </li>
+                <li>
+                  <a href="#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
     <!-- intro-->
     <section id="intro" style="background-image: url('img/ein-steig.jpg');" class="intro">      
       <div class="overlay"></div>
@@ -33,9 +81,9 @@
         <div class="container clearfix">
           <div class="row">
             <div class="col-md-8 col-md-offset-2 col-sm-12">
-              <p class="italic">Oh, hello, nice to meet you!</p>
-              <h1>I am B&W Landing page or portfolio Theme.</h1>
-              <p class="italic">I am a ready to be your portfolio, telling your stories and short presentations.</p>
+              <p class="italic"></p>
+              <h1>Prosith Khiev</h1>
+              <p class="italic"> - Web Developer - </p>
             </div>
           </div>
         </div>
@@ -43,7 +91,7 @@
     </section>
     <!-- intro end-->
     <!-- navbar-->
-    <header class="header">
+    <!-- <header class="header">
       <div class="sticky-wrapper">
         <div role="navigation" class="navbar navbar-default">
           <div class="container">
@@ -63,7 +111,7 @@
           </div>
         </div>
       </div>
-    </header>
+    </header> -->
     <!-- /.navbar-->
     <!-- about-->
     <section id="about" class="text">
@@ -195,19 +243,13 @@
             <h2 class="heading">Contact</h2>
             <div class="row">
               <div class="col-md-6">
-                <form id="contact-form" method="post" action="#" class="contact-form">
+                <form id="contact-form" method="post" action="" class="contact-form">
                   <div class="controls">
                     <div class="row">
                       <div class="col-sm-6">
                         <div class="form-group">
-                          <label for="name">Your firstname *</label>
-                          <input type="text" name="name" placeholder="Enter your firstname" required="required" class="form-control">
-                        </div>
-                      </div>
-                      <div class="col-sm-6">
-                        <div class="form-group">
-                          <label for="surname">Your lastname *</label>
-                          <input type="text" name="surname" placeholder="Enter your  lastname" required="required" class="form-control">
+                          <label for="name">Your name *</label>
+                          <input type="text" name="name" placeholder="Enter your name" required="required" class="form-control">
                         </div>
                       </div>
                     </div>
@@ -220,7 +262,7 @@
                       <textarea rows="4" name="message" placeholder="Enter your message" required="required" class="form-control"></textarea>
                     </div>
                     <div class="text-center">
-                      <input type="submit" name="name" value="Send message" class="btn btn-primary btn-block">
+                      <input type="button" onclick=onContactSubmit() name="name" value="Send message" class="btn btn-primary btn-block">
                     </div>
                   </div>
                 </form>
