@@ -109,10 +109,10 @@ section {
     transform: translate(0, 0);
   }
 }
-.services .box {
+.skills .box {
   margin-top: 20px;
 }
-.services .icon {
+.skills .icon {
   font-size: 50px;
 }
 #map {
