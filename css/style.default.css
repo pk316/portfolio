@@ -144,8 +144,9 @@ p.social a i {
   vertical-align: bottom;
   line-height: 38px;
 }
-p.social a.facebook {
-  background-color: #ccc;
+p.social a.github {
+  background-color: #111;
+  font-size: 45px;
 }
 p.social a.gplus {
   background-color: #333;
