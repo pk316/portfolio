@@ -586,6 +586,19 @@ NAVBAR
 .navbar-default .navbar-link:hover {
   color: #333333;
 }
+.gray{
+  background-color: #eee
+}
+.black{
+  background-color: #000000
+}
+
+
+
+
+
+
+
 /* scaffolding */
 body {
   font-family: "Cardo", "Times New Roman", Times, serif;
