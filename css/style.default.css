@@ -904,12 +904,12 @@ h3,
 p {
   margin: 0 0 22px;
 }
-.lead {
+.about-me{
   margin-bottom: 22px;
   font-size: 18px;
 }
 @media (min-width: 768px) {
-  .lead {
+  .about-me {
     font-size: 24px;
   }
 }
