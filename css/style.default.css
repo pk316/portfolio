@@ -14,6 +14,9 @@ body {
 .heading {
   font-size: 2em;
 }
+.page-heading{
+  font-size: 2em;
+}
 .intro {
   position: relative;
   width: 100%;
@@ -109,6 +112,11 @@ section {
     -ms-transform: translate(0, 0);
     transform: translate(0, 0);
   }
+}
+.skills-heading{
+  font-family: 'Montserrat',
+  sans-serif;
+  font-weight: 700;
 }
 .skills .box {
   margin-top: 20px;
@@ -906,14 +914,16 @@ p {
   margin: 0 0 22px;
 }
 .about-me{
+  font-family: "Open Sans",
+  sans-serif;
   margin-bottom: 22px;
-  font-size: 18px;
+  font-size: 14px;
 }
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .about-me {
     font-size: 24px;
   }
-}
+} */
 .text-small {
   font-size: 12px;
 }
