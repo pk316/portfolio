@@ -11,7 +11,7 @@ $(function () {
 function onContactSubmit() {
     $.ajax({
         type : "POST",
-        url : '../php_mailer/mail_handler.php',
+        url : './php_mailer/mail_handler.php',
         data : $("#contact-form").serialize(),
         success : function (result) {
        
