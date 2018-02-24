@@ -138,6 +138,10 @@ section {
   width: 75px;
   height: 75px;
 }
+.portfolio-heading {
+  text-align: center;
+  font-size: 2em;
+}
 .contact-form {
   margin-bottom: 40px;
 }
