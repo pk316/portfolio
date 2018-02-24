@@ -138,16 +138,6 @@ section {
   width: 75px;
   height: 75px;
 }
-.image-overlay{
-    position: absolute;
-    opacity: 1;
-    top: initial;
-    bottom: 0;
-    height: 30%;
-    width: 100%;
-    background-color: black;
-    margin: 0 auto;
-}
 .contact-form {
   margin-bottom: 40px;
 }
