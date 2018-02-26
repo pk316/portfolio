@@ -1,10 +1,8 @@
 $(function () {
-
     lightbox();
     sticky();
     utils();
     demo();
-
 });
 
 
@@ -13,23 +11,17 @@ function onContactSubmit() {
         type : "POST",
         url : '../php_mailer/mail_handler.php',
         data : $("#contact-form").serialize(),
-        success : function (result) {
-       
+        success : function (result) { 
         }
     });
 }
     
 
 function demo() {
-
     $("#page").change(function () {
-
         if ($(this).val() !== '') {
-
             window.location.href = $(this).val();
-
         }
-
         return false;
     });
 }
@@ -39,7 +31,6 @@ function demo() {
  *  =======================================*/
 
 function lightbox() {
-
     $(document).delegate('*[data-toggle="lightbox"]', 'click', function (event) {
         event.preventDefault();
         $(this).ekkoLightbox();
@@ -51,9 +42,7 @@ function lightbox() {
  *  =======================================*/
 
 function sticky() {
-
     $(".header").sticky();
-
 }
 
 
