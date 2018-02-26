@@ -94,6 +94,10 @@ section {
 }
 .portfolio-heading {
   color: white;
+  display: block;
+}
+.portfolio-text a:hover{
+  text-decoration: none;
 }
 
 .portfolio-text {
