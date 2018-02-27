@@ -64,17 +64,16 @@ section {
   }
 }
 
-
-
 .portfolio-container {
   position: relative;
-  /* width: 50%; */
 }
+
 .portfolio-img {
   display: block;
   width: 100%;
   height: auto;
 }
+
 .portfolio-overlay {
   position: absolute;
   bottom: 0;
@@ -91,14 +90,17 @@ section {
   -moz-transition: all 0.4s ease-in-out 0s;
   transition: all 0.4s ease-in-out 0s;
 }
+
 .portfolio-container:hover .portfolio-overlay {
   display: block;
   /* transform: scale(1) */
 }
+
 .portfolio-heading {
   color: white;
   display: block;
 }
+
 .overlay-content a:hover{
   text-decoration: none;
 }
@@ -110,15 +112,13 @@ section {
   top: 50%;
   left: 50%;
   text-align: center;
-  /* -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%); */
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  /* -webkit-transition: all 0.3s ease-in-out 0s;
-  -moz-transition: all 0.3s ease-in-out 0s; */
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
   transition: all .5s ease-in-out 0s;
 } 
-
-
 
 .overlay {
   position: absolute;
