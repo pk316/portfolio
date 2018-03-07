@@ -600,7 +600,7 @@ NAVBAR
 .nav-name:hover,
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: red;
+  color: rgb(67, 138, 219);
   font-weight: 900;
   background-color: transparent;
 }
@@ -608,7 +608,7 @@ NAVBAR
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   /* color: #000000; */
-  color: red;
+  color: rgb(67, 138, 219);
   font-weight: 900;
   /* background-color: #E1FCF5; */
   background-color: transparent;
