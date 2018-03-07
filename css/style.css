@@ -19,7 +19,10 @@ body {
 .page-heading{
   font-size: 2em;
 }
-
+.main-resume {
+  font-size: 2em;
+  color: white;
+}
 .intro {
   position: relative;
   width: 100%;
@@ -250,20 +253,26 @@ p.social a i {
   vertical-align: bottom;
   line-height: 38px;
 }
-
-p.social a.github {
-  background-color: #111;
-  font-size: 45px;
+p.social a {
+  font-size: 20px;
+   background-color: #000;
 }
 
-p.social a.linkedin {
+/* p.social a.linkedin {
   background-color: #333;
-  font-size: 20px;
 }
 
 p.social a.email {
-  background-color: #666;
+  background-color: #000;
 }
+p.social a.resume {
+  background-color: #000;
+}
+*/
+p.social a.github {
+  background-color: #000;
+  font-size: 52px;
+} 
 
 .copyright {
   margin-top: 40px;
