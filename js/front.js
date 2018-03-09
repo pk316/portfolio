@@ -3,20 +3,32 @@ $(function () {
     sticky();
     utils();
     demo();
+    onContactSubmit()
 });
 
 /* =========================================
  *  mailer
  *  =======================================*/
+
+
 function onContactSubmit() {
+    $('#contact-form').on('submit', function () {
+        event.preventDefault();
+
+    $('#submit-button').addClass('fas fa-spinner').text('Sending..');
+
     $.ajax({
         type : "POST",
         url : '../php_mailer/mail_handler.php',
         data : $("#contact-form").serialize(),
         success : function (result) { 
+            setTimeout(function () {
+                $('#contact-form').hide();
+                $('.msg-sent').show()
+            }, 1000)
         }
     });
-}
+})}
     
 
 function demo() {
