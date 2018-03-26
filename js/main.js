@@ -1,3 +1,153 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+$(function () {
+    lightbox();
+    sticky();
+    utils();
+    demo();
+    onContactSubmit()
+});
 
-},{}]},{},[1])
+/* =========================================
+ *  mailer
+ *  =======================================*/
+
+
+function onContactSubmit() {
+    $('#contact-form').on('submit', function () {
+        event.preventDefault();
+
+    $('#submit-button').addClass('fas fa-spinner').text('Sending...');
+
+    $.ajax({
+        type : "POST",
+        url : '../php_mailer/mail_handler.php',
+        data : $("#contact-form").serialize(),
+        success : function (result) { 
+            setTimeout(function () {
+                $('#contact-form').hide();
+                $('.msg-sent').show()
+            }, 1000)
+        }
+    });
+})}
+    
+
+function demo() {
+    $("#page").change(function () {
+        if ($(this).val() !== '') {
+            window.location.href = $(this).val();
+        }
+        return false;
+    });
+}
+
+/* =========================================
+ *  lightbox
+ *  =======================================*/
+
+function lightbox() {
+    $(document).delegate('*[data-toggle="lightbox"]', 'click', function (event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+    });
+}
+
+/* =========================================
+ *  sticky header 
+ *  =======================================*/
+
+function sticky() {
+    $(".header").sticky();
+}
+
+
+
+function utils() {
+
+    /* tooltips */
+
+    $('[data-toggle="tooltip"]').tooltip();
+
+    /* click on the box activates the radio */
+
+    $('#checkout').on('click', '.box.shipping-method, .box.payment-method', function (e) {
+        var radio = $(this).find(':radio');
+        radio.prop('checked', true);
+    });
+    /* click on the box activates the link in it */
+
+    $('.box.clickable').on('click', function (e) {
+
+        window.location = $(this).find('a').attr('href');
+    });
+    /* external links in new window*/
+
+    $('.external').on('click', function (e) {
+
+        e.preventDefault();
+        window.open($(this).attr("href"));
+    });
+    /* animated scrolling */
+
+    /* animated scrolling */
+
+    $('.scroll-to, #navigation a').click(function (event) {
+        event.preventDefault();
+        var full_url = this.href;
+        var parts = full_url.split("#");
+        var trgt = parts[1];
+
+        $('body').scrollTo($('#' + trgt), 800, {offset: -40});
+
+    });
+
+}
+
+$.fn.alignElementsSameHeight = function () {
+    $('.same-height-row').each(function () {
+
+        var maxHeight = 0;
+        var children = $(this).find('.same-height');
+        children.height('auto');
+        if ($(window).width() > 768) {
+            children.each(function () {
+                if ($(this).innerHeight() > maxHeight) {
+                    maxHeight = $(this).innerHeight();
+                }
+            });
+            children.innerHeight(maxHeight);
+        }
+
+        maxHeight = 0;
+        children = $(this).find('.same-height-always');
+        children.height('auto');
+        children.each(function () {
+            if ($(this).innerHeight() > maxHeight) {
+                maxHeight = $(this).innerHeight();
+            }
+        });
+        children.innerHeight(maxHeight);
+    });
+}
+
+$(window).load(function () {
+
+    windowWidth = $(window).width();
+    windowHeight = $(window).height();
+
+    $(this).alignElementsSameHeight();
+
+});
+$(window).resize(function () {
+
+    newWindowWidth = $(window).width();
+    newWindowHeight = $(window).height();
+
+    if (windowWidth !== newWindowWidth) {
+        setTimeout(function () {
+            $(this).alignElementsSameHeight();
+        }, 100);
+        windowWidth = newWindowWidth;
+        windowHeight = newWindowHeight;
+    }
+
+});

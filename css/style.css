@@ -255,22 +255,12 @@ p.social a i {
   vertical-align: bottom;
   line-height: 38px;
 }
+
 p.social a {
   font-size: 20px;
    background-color: #000;
 }
 
-/* p.social a.linkedin {
-  background-color: #333;
-}
-
-p.social a.email {
-  background-color: #000;
-}
-p.social a.resume {
-  background-color: #000;
-}
-*/
 p.social a.github {
   background-color: #000;
   font-size: 30px;
@@ -315,31 +305,33 @@ p.social a.github {
 }
 
 /*
-
 =====================
 NAVBAR
 =====================
-
 */
 .header {
   width: 100%;
   background: #fff;
   z-index: 1003;
 }
+
 .navbar-collapse {
   position: relative;
   z-index: 1003;
   background: #fff;
 }
+
 .navbar-collapse a {
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
+
 .navbar-header {
   position: relative;
   z-index: 1004;
 }
+
 .nav-name{
   font-size: .8em;
   padding-top: 10%;
@@ -350,41 +342,51 @@ NAVBAR
 /* THEMING OF BOOTSTRAP COMPONENTS           */
 /* ========================================= */
 /* nav */
+
 .nav {
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
 }
+
 .nav > li > a {
   padding: 10px 15px;
 }
+
 .nav > li > a:hover,
 .nav > li > a:focus {
   background-color: #eeeeee;
 }
+
 .nav > li.disabled > a {
   color: #999999;
 }
+
 .nav > li.disabled > a:hover,
 .nav > li.disabled > a:focus {
   color: #999999;
 }
+
 .nav .open > a,
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #eeeeee;
   border-color: #444444;
 }
+
 .nav-tabs {
   border-bottom: 1px solid #dddddd;
 }
+
 .nav-tabs > li > a {
   line-height: 1.42857143;
   border-radius: 0 0 0 0;
 }
+
 .nav-tabs > li > a:hover {
   border-color: #eeeeee #eeeeee #dddddd;
 }
+
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
@@ -392,23 +394,28 @@ NAVBAR
   background-color: #ffffff;
   border: 1px solid #dddddd;
 }
+
 .nav-pills > li > a {
   border-radius: 0;
 }
+
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
   color: #ffffff;
   background-color: #444444;
 }
+
 .nav-tabs-justified > li > a {
   border-radius: 0;
 }
+
 .nav-tabs-justified > .active > a,
 .nav-tabs-justified > .active > a:hover,
 .nav-tabs-justified > .active > a:focus {
   border: 1px solid #dddddd;
 }
+
 @media (min-width: 768px) {
   .nav-tabs-justified > li > a {
     border-bottom: 1px solid #dddddd;
