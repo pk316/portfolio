@@ -15,7 +15,7 @@ function onContactSubmit() {
     $('#contact-form').on('submit', function () {
         event.preventDefault();
 
-    $('#submit-button').addClass('fas fa-spinner').text('Sending...');
+        $('#submit-button').find('.icon-spin').css('display', 'inline-block');
 
     $.ajax({
         type : "POST",
@@ -23,13 +23,13 @@ function onContactSubmit() {
         data : $("#contact-form").serialize(),
         success : function (result) { 
             setTimeout(function () {
-                $('#contact-form').hide();
+                $("#contact-form").reset();
                 $('.msg-sent').show()
             }, 1000)
         }
     });
 })}
-    
+
 
 function demo() {
     $("#page").change(function () {

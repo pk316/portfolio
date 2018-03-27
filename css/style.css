@@ -193,6 +193,10 @@ section {
     -ms-transform: translate(0, 0);
     transform: translate(0, 0);
   }
+
+  .img-circle {
+    width: 450px;
+  }
 }
 
 .bio {
@@ -1255,4 +1259,33 @@ a.list-group-item.active > .badge,
 
 .nav-pills > li > a > .badge {
   margin-left: 3px;
+}
+
+.icon-spin {
+  display: none;
+  font-family: 'fontAwesome';
+  -webkit-animation: fa-spinner 2s infinite linear;
+  animation: fa-spinner 2s infinite linear;
+}
+
+@-webkit-keyframes fa-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes fa-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
 }
