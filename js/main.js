@@ -56,11 +56,18 @@ function onContactSubmit() {
                 type: "POST",
                 url: '../php_mailer/mail_handler.php',
                 data: $("#contact-form").serialize(),
+                timeout: 10000,
                 success: function (result) {
                     setTimeout(function () {
                         $('.msg-sent').show()
+                        $('.alert-fail').hide()
                         $('#submit-button').find('.icon-spin').css('display', 'none');
                         $(".form-control").val("")
+                    }, 1000)
+                },
+                error: function (error){
+                    setTimeout(function () {
+                        $('.alert-fail').show()
                     }, 1000)
                 }
             });
