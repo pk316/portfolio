@@ -50,6 +50,7 @@ function onContactSubmit() {
             event.preventDefault();
         }
         else {
+             $('#submit-button').find('.icon-spin').css('display', 'inline-block');
             $.ajax({
                 type: "POST",
                 url: '../php_mailer/mail_handler.php',
