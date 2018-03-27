@@ -274,7 +274,7 @@ p.social a.github {
   font-size: 30px;
 } 
 
-.msg-sent {
+.msg-sent, .msg-fail {
   display:none;
 }
 
