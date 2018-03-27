@@ -50,6 +50,7 @@ function onContactSubmit() {
             event.preventDefault();
         }
         else {
+            $('.msg-sent').hide();
              $('#submit-button').find('.icon-spin').css('display', 'inline-block');
             $.ajax({
                 type: "POST",
