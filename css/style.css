@@ -1299,7 +1299,7 @@ a.list-group-item.active > .badge,
   margin-left: 10px;
 }
 
-.error_show {
+.error-show {
   color: red;
   margin-left: 10px;
 }
