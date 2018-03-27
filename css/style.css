@@ -149,6 +149,10 @@ section {
   margin: 0 auto;
 }
 
+.img-circle {
+  width: 450px;
+}
+
 .section-inverse {
   color: #fff;
 }
