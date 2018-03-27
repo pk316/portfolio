@@ -58,16 +58,15 @@ function onContactSubmit() {
                 data: $("#contact-form").serialize(),
                 timeout: 10000,
                 success: function (result) {
-                    setTimeout(function () {
-                        $('.msg-sent').show()
-                        $('.alert-fail').hide()
+                        $('.alert-fail').hide();
+                        $('.msg-sent').show();
                         $('#submit-button').find('.icon-spin').css('display', 'none');
                         $(".form-control").val("")
-                    }, 1000)
                 },
                 error: function (error){
                     setTimeout(function () {
-                        $('.alert-fail').show()
+                        $('.msg-fail').show();
+                        $('#submit-button').find('.icon-spin').css('display', 'none');
                     }, 1000)
                 }
             });
