@@ -25,7 +25,7 @@ function onContactSubmit() {
             setTimeout(function () {
                 $('.msg-sent').show()
                 $('#submit-button').find('.icon-spin').css('display', 'none');
-                $('.form-content').value("")
+                $(".form-control").val("")
             }, 1000)
         }
     });
