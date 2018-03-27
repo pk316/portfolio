@@ -23,8 +23,8 @@ function onContactSubmit() {
         data : $("#contact-form").serialize(),
         success : function (result) { 
             setTimeout(function () {
-                $("#contact-form").hide();
                 $('.msg-sent').show()
+                $("#contact-form").reset();
             }, 1000)
         }
     });
