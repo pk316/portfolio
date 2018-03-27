@@ -51,6 +51,7 @@ function onContactSubmit() {
         }
         else {
             $('.msg-sent').hide();
+            $('.msg-fail').hide();
              $('#submit-button').find('.icon-spin').css('display', 'inline-block');
             $.ajax({
                 type: "POST",
@@ -58,7 +59,7 @@ function onContactSubmit() {
                 data: $("#contact-form").serialize(),
                 timeout: 10000,
                 success: function (result) {
-                        $('.alert-fail').hide();
+                        $('.msg-fail').hide();
                         $('.msg-sent').show();
                         $('#submit-button').find('.icon-spin').css('display', 'none');
                         $(".form-control").val("")
