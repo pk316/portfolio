@@ -24,11 +24,13 @@ function onContactSubmit() {
         success : function (result) { 
             setTimeout(function () {
                 $('.msg-sent').show()
-                $("#contact-form").reset();
             }, 1000)
         }
     });
+        $('#submit-button').find('.icon-spin').css('display', 'none');
+        $("#contact-form").reset();
 })}
+
 
 
 function demo() {
