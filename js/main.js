@@ -12,8 +12,33 @@ $(function () {
 
 
 function onContactSubmit() {
+
+    $('.contact-name').on('input', function() {
+	var input=$(this);
+	var is_name=input.val();
+	if(is_name){input.removeClass("invalid").addClass("valid");}
+	else{input.removeClass("valid").addClass("invalid");}
+    });
+
+    $('.contact-email').on('input', function () {
+        var input = $(this);
+        var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        var is_email = re.test(input.val());
+        if (is_email) { input.removeClass("invalid").addClass("valid"); }
+        else { input.removeClass("valid").addClass("invalid"); }
+    });
+
+    $('.contact-message').keyup(function (event) {
+        var input = $(this);
+        var message = $(this).val();
+        console.log(message);
+        if (message) { input.removeClass("invalid").addClass("valid"); }
+        else { input.removeClass("valid").addClass("invalid"); }
+    });
+
+
     $('#contact-form').on('submit', function () {
-        event.preventDefault();
+        e.preventDefault();
 
         $('#submit-button').find('.icon-spin').css('display', 'inline-block');
 
