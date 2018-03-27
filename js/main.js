@@ -15,7 +15,7 @@ function onContactSubmit() {
     $('#contact-form').on('submit', function () {
         event.preventDefault();
 
-    $('#submit-button').addClass('fas fa-spinner').text('Sending...');
+        $('#submit-button').find('.icon-spin').css('display', 'inline-block');
 
     $.ajax({
         type : "POST",
