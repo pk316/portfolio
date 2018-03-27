@@ -1297,6 +1297,7 @@ a.list-group-item.active > .badge,
 .error {
   display: none;
   margin-left: 10px;
+  color: red;
 }
 
 .error-show {
