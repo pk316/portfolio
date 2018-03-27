@@ -23,9 +23,9 @@ function onContactSubmit() {
         data : $("#contact-form").serialize(),
         success : function (result) { 
             setTimeout(function () {
-                $("#contact-form").reset();
                 $('.msg-sent').show()
             }, 1000)
+            $("#contact-form").reset();
         }
     });
 })}
