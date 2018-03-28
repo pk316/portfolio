@@ -6,6 +6,14 @@ $(function () {
     onContactSubmit()
 });
 
+$(window).scroll(function () {
+    $('.navbar-collapse').collapse('hide');
+})
+
+$('.nav-name').click(function(event){
+    $('.navbar-collapse').collapse('hide');
+});
+
 /* =========================================
  *  mailer
  *  =======================================*/
