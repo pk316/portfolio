@@ -6,6 +6,9 @@ $(function () {
     onContactSubmit()
 });
 
+/* =========================================
+ *  close burger nav 
+ *  =======================================*/
 $(window).scroll(function () {
     $('.navbar-collapse').collapse('hide');
 })
@@ -27,7 +30,6 @@ $('.contact-name').on('input', function () {
 
 $('.contact-email').on('input', function() {
 	var input=$(this);
-    // var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     var re = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,10})?$/;
 	var is_email=re.test(input.val());
 	if(is_email){input.removeClass("invalid").addClass("valid");}
@@ -83,34 +85,14 @@ function onContactSubmit() {
     });
 }
 
-//     $('#contact-form').on('submit', function () {
-//         event.preventDefault();
-
-//         $('#submit-button').find('.icon-spin').css('display', 'inline-block');
-
-//     $.ajax({
-//         type : "POST",
-//         url : '../php_mailer/mail_handler.php',
-//         data : $("#contact-form").serialize(),
-//         success : function (result) { 
-//             setTimeout(function () {
-//                 $('.msg-sent').show()
-//                 $('#submit-button').find('.icon-spin').css('display', 'none');
-//                 $(".form-control").val("")
-//             }, 1000)
+// function demo() {
+//     $("#page").change(function () {
+//         if ($(this).val() !== '') {
+//             window.location.href = $(this).val();
 //         }
+//         return false;
 //     });
-// })}
-    
-
-function demo() {
-    $("#page").change(function () {
-        if ($(this).val() !== '') {
-            window.location.href = $(this).val();
-        }
-        return false;
-    });
-}
+// }
 
 /* =========================================
  *  lightbox
@@ -162,15 +144,15 @@ function utils() {
 
     /* animated scrolling */
 
-    $('.scroll-to, #navigation a').click(function (event) {
-        event.preventDefault();
-        var full_url = this.href;
-        var parts = full_url.split("#");
-        var trgt = parts[1];
+    // $('.scroll-to, #navigation a').click(function (event) {
+    //     event.preventDefault();
+    //     var full_url = this.href;
+    //     var parts = full_url.split("#");
+    //     var trgt = parts[1];
 
-        $('body').scrollTo($('#' + trgt), 800, {offset: -40});
+    //     $('body').scrollTo($('#' + trgt), 800, {offset: -40});
 
-    });
+    // });
 
 }
 
