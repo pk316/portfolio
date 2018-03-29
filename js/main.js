@@ -2,7 +2,6 @@ $(function () {
     lightbox();
     sticky();
     utils();
-    demo();
     onContactSubmit()
 });
 
@@ -85,15 +84,6 @@ function onContactSubmit() {
     });
 }
 
-// function demo() {
-//     $("#page").change(function () {
-//         if ($(this).val() !== '') {
-//             window.location.href = $(this).val();
-//         }
-//         return false;
-//     });
-// }
-
 /* =========================================
  *  lightbox
  *  =======================================*/
@@ -112,8 +102,6 @@ function lightbox() {
 function sticky() {
     $(".header").sticky();
 }
-
-
 
 function utils() {
 
